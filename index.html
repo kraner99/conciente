@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Consciente - Início</title>
+    
+    <!-- CSS Incorporado Unificado (style.css) -->
+    <style>
+:root {
+    --primary-color: #2e7d32;
+    --primary-dark: #1b5e20;
+    --primary-light: #e8f5e9;
+    --accent-color: #43a047;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #616161;
+    --error-bg: #ffebee;
+    --error-border: #e53935;
+    --error-text: #c62828;
+    --success-bg: #e8f5e9;
+    --success-border: #43a047;
+    --success-text: #2e7d32;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    --hover-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.header-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 960px;
+    width: 90%;
+    margin: 2.5rem auto;
+}
+
+.intro-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.intro-card h2 {
+    color: var(--primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.intro-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.intro-card p {
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+/* Cards informativos de destaque */
+.info-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card-item {
+    background-color: #fafafa;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.info-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+    background-color: #ffffff;
+}
+
+.info-card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.info-card-item h3 {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Botão de ação Principal */
+.action-container {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.btn-iniciar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 1.1rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-iniciar:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(46, 125, 50, 0.45);
+}
+
+.card-quiz {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+}
+
+.card-quiz h2 {
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.8rem;
+}
+
+.opcoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.opcao-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ocultar input radio padrão */
+.radio-resposta {
+    display: none;
+}
+
+/* Card Clicável da Opção */
+.opcao-card {
+    background-color: var(--card-bg);
+    border: 2px solid #e0e0e0;
+    border-radius: var(--radius);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.opcao-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: var(--hover-shadow);
+}
+
+.opcao-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.opcao-card:hover img {
+    transform: scale(1.03);
+}
+
+.opcao-card span {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.feedback {
+    display: none;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    animation: fadeIn 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+}
+
+.feedback-erro {
+    background-color: var(--error-bg);
+    border-left: 5px solid var(--error-border);
+    color: var(--error-text);
+}
+
+.feedback-acerto {
+    background-color: var(--success-bg);
+    border-left: 5px solid var(--success-border);
+    color: var(--success-text);
+}
+
+/* Link para Próxima Pergunta */
+.feedback-acerto a {
+    display: inline-block;
+    margin-top: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.feedback-acerto a:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* INTERATIVIDADE VIA CSS SELETOR :CHECKED */
+.radio-resposta:checked ~ .feedback {
+    display: block;
+}
+
+.radio-resposta:checked + .opcao-card {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+/* ANIMAÇÃO DE APARIÇÃO */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.9rem;
+    }
+    .header-subtitle {
+        font-size: 0.95rem;
+    }
+    .intro-card, .card-quiz {
+        padding: 1.5rem;
+    }
+    .btn-iniciar {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Descarte Consciente</h1>
+        <p class="header-subtitle">Preservando o meio ambiente através da informação</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="intro-card">
+            <h2>Por que o Descarte Correto de Medicamentos é Importante?</h2>
+            
+            <p>
+                O descarte inadequado de remédios vencidos ou em desuso no lixo comum, na pia ou no vaso sanitário representa um sério risco ao meio ambiente e à saúde pública. As substâncias químicas contidas nos medicamentos passam pelas estações de tratamento de esgoto sem serem totalmente filtradas, contaminando rios, solos e o lençol freático.
+            </p>
+
+            <div class="info-cards-grid">
+                <div class="info-card-item">
+                    <span class="info-card-icon">🌊</span>
+                    <h3>Poluição da Água</h3>
+                    <p>Substâncias químicas descartadas no esgoto afetam a vida marinha e reentram no ciclo da água.</p>
+                </div>
+                <div class="info-card-item">
+                    <h3>💊 Resistência Bacteriana</h3>
+                    <p>Antibióticos descartados incorretamente no meio ambiente favorecem a formação de superbactérias.</p>
+                </div>
+                <div class="info-card-item">
+                    <span class="info-card-icon">🌱</span>
+                    <h3>Logística Reversa</h3>
+                    <p>Farmácias possuem coletores apropriados para destinação segura via incineração ou aterro especial.</p>
+                </div>
+            </div>
+
+            <p>
+                A <strong>Logística Reversa</strong> garante que os resíduos de saúde sejam coletados e levados a um tratamento térmico ou de isolamento correto, evitando que compostos ativos contaminem os seres vivos.
+            </p>
+
+            <div class="action-container">
+                <a href="p1.html" class="btn-iniciar">
+                    Iniciar Quiz Sustentável
+                    <span>➔</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Trabalho Acadêmico | Sustentabilidade & Meio Ambiente</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    background-color: #15c91e; /* Verde sustentável */
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    padding: 16px;
+    flex: 1;
+    max-width: 500px; /* Mantém com cara de aplicativo móvel */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* CARD DA PERGUNTA */
+.card-quiz {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.card-quiz h2 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #1b5e20;
+}
+
+/* GRID DE OPÇÕES */
+.opcoes-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ESCONDER O RADIO BUTTON */
+.radio-resposta {
+    display: none;
+}
+
+/* CARD DA OPÇÃO (IMAGEM + TEXTO) */
+.opcao-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.opcao-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.opcao-card span {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* HOVER PARA TELAS MAIORES OU TOQUE */
+.opcao-card:hover {
+    border-color: #a5d6a7;
+    background-color: #f9fbf9;
+}
+
+/* CAIXAS DE FEEDBACK (ESCONDIDAS POR PADRÃO) */
+.feedback {
+    display: none;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.feedback-erro {
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+.feedback-acerto {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border-left: 4px solid #2e7d32;
+}
+
+/* MÁGICA DO CSS: MOSTRAR FEEDBACK AO SELECIONAR */
+.radio-resposta:checked + .opcao-card {
+    border-color: #2e7d32;
+    background-color: #f1f8e9;
+}
+
+.radio-resposta:checked ~ .feedback {
+    display: block;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: #777;
+}

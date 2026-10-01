@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Consciente - Quiz Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho / Apresentação -->
+    <header class="header">
+       <h1>Descarte Consciente</h1>
+    </header>
+
+    <main class="container">
+        
+        <!-- PERGUNTA 1 -->
+        <section class="card-quiz">
+            <span class="tag">Pergunta 1</span>
+            <h2>Onde devo descartar os medicamenos?</h2>
+
+            <div class="opcoes-grid">
+                
+                <!-- Resposta Errada: Na rua -->
+                <div class="opcao-item">
+                    <input type="radio" name="p1" id="p1-errada1" class="radio-resposta">
+                    <label for="p1-errada1" class="opcao-card">
+                        <img src="https://via.placeholder.com/150/e74c3c/ffffff?text=Lixo+Comum" alt="RUA">
+                        <span>Na rua</span>
+                    </label>
+                    <div class="feedback feedback-erro">
+                        ❌ <strong>Resposta Incorreta!</strong> Não devemos jogar lixo nas ruas.
+                    </div>
+                </div>
+
+                <!-- Resposta Errada: Vaso Sanitário -->
+                <div class="opcao-item">
+                    <input type="radio" name="p1" id="p1-errada2" class="radio-resposta">
+                    <label for="p1-errada2" class="opcao-card">
+                        <img src="https://via.placeholder.com/150/e74c3c/ffffff?text=Vaso+Sanitario" alt="Vaso sanitário">
+                        <span>Vaso Sanitário / Pia</span>
+                    </label>
+                    <div class="feedback feedback-erro">
+                        ❌ <strong>Resposta Incorreta!</strong> Jogar na rede de esgoto contamina a água e afeta a vida marinha, pois as estações de tratamento não filtram substâncias químicas de remédios.
+                    </div>
+                </div>
+
+                <!-- Resposta Certa: Farmácia -->
+                <div class="opcao-item">
+                    <input type="radio" name="p1" id="p1-certa" class="radio-resposta">
+                    <label for="p1-certa" class="opcao-card">
+                        <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Ponto+de+Coleta" alt="Ponto de Coleta em Farmácia">
+                        <span>Ponto de Coleta em Farmácias</span>
+                    </label>
+                    <div class="feedback feedback-acerto">
+                        ✅ <strong>Resposta Correta!</strong> As farmácias possuem coletores específicos para a 
+                        Logística Reversa. Esses itens são incinerados ou descartados em aterros industriais seguros, 
+                        protegendo o meio ambiente e a saúde pública.<a href="p2.html">PROXIMA PERGUNTA</a> 
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Trabalho Acadêmico | Sustentabilidade & Meio Ambiente</p>
+    </footer>
+
+</body>
+</html>

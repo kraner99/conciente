@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Consciente - Quiz Concluído</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionais específicos para a tela final */
+        .card-agradecimento {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .icon-sucesso {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 1s ease infinite alternate;
+        }
+
+        .card-agradecimento h2 {
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .mensagem-motivadora {
+            background-color: var(--primary-light);
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .mensagem-motivadora h3 {
+            color: var(--primary-dark);
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mensagem-motivadora p {
+            color: var(--text-color);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .botoes-grupo {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-secundario {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-secundario:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Descarte Consciente</h1>
+        <p class="header-subtitle">Preservando o meio ambiente através da informação</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card-agradecimento">
+            <span class="icon-sucesso">🎉</span>
+            <h2>Parabéns e Obrigado por Participar!</h2>
+            <p>Você concluiu o Quiz Sustentável e deu um passo importante na conscientização ambiental.</p>
+
+            <div class="mensagem-motivadora">
+                <h3>🌱 Pequenas Atitudes, Grandes Impactos!</h3>
+                <p>
+                    O descarte correto de remédios e materiais contaminados protege nossos rios, os animais e a nossa própria água potável. Quando dizemos <strong>não</strong> ao descarte no esgoto ou no lixo comum, estamos promovendo a saúde pública e garantindo um planeta mais limpo para as futuras gerações. 
+                </p>
+                <br>
+                <p>
+                    Espalhe esse conhecimento! Compartilhe com sua família e amigos a importância de levar medicamentos vencidos aos pontos de coleta em farmácias.
+                </p>
+            </div>
